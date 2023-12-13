@@ -24,8 +24,9 @@ namespace ProblematicProblem
                 }
                 else
                 {
-                    cont = false;
+                  return; 
                 }
+           
 
                 Console.WriteLine();
 
@@ -80,10 +81,10 @@ namespace ProblematicProblem
                         Console.Write(". ");
                         Thread.Sleep(500);
                     }
-                    Console.WriteLine();
-                    int randomNumber = rng.Next(activities.Count);
-                    string randomActivity = activities[randomNumber];
-                    if (userAge > 21 && randomActivity == "Wine Tasting")
+                      Console.WriteLine();
+                     int randomNumber = rng.Next(activities.Count);
+                     string randomActivity = activities[randomNumber];
+                    if (userAge < 21 && randomActivity == "Wine Tasting")
                     {
                         Console.WriteLine($"Oh no! Looks like you are too young to do {randomActivity}");
                         Console.WriteLine("Pick something else!");
